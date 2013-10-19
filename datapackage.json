@@ -1,0 +1,102 @@
+{
+  "name": "gdp-us",
+  "title": "Gross Domestic Product of the United States (US GDP)",
+  "sources": [{
+    "name": "Bureau of Economics Analysis (US Government)",
+    "web": "http://www.bea.gov/national/index.htm#gdp"
+  }],
+  "licenses": [
+    {
+      "id": "odc-pddl",
+      "name": "Public Domain Dedication and License",
+      "version": "1.0",
+      "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "year",
+      "path": "year.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "date",
+            "description": "The year",
+            "format": "yyyy",
+            "type": "date"
+          },
+          {
+            "name": "level-current",
+            "description": "GDP in billions of current dollars",
+            "type": "number"
+          },
+          {
+            "name": "level-chained",
+            "description": "GDP in billions of chained 2009 dollars",
+            "type": "number"
+          },
+          {
+            "name": "change-current",
+            "description": "GDP percent change based on current dollars",
+            "type": "number"
+          },
+          {
+            "name": "change-chained",
+            "description": "GDP percent change based on chained 2009 dollars",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "quarter",
+      "path": "quarter.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "date",
+            "description": "The quarter (first day of the quarter)",
+            "format": "yyyy-mm-dd",
+            "type": "date"
+          },
+          {
+            "name": "level-current",
+            "description": "GDP in billions of current dollars",
+            "type": "number"
+          },
+          {
+            "name": "level-chained",
+            "description": "GDP in billions of chained 2009 dollars",
+            "type": "number"
+          },
+          {
+            "name": "change-current",
+            "description": "GDP percent change based on current dollars",
+            "type": "number"
+          },
+          {
+            "name": "change-chained",
+            "description": "GDP percent change based on chained 2009 dollars",
+            "type": "number"
+          }
+        ]
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "Graph",
+      "label": "Change in GDP",
+      "type": "Graph",
+      "state": {
+        "graphType": "columns",
+        "group": "date",
+        "series": [ "change-chained" ]
+      }
+    }
+  ]
+}
