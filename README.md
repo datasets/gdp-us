@@ -14,6 +14,16 @@ Chain Indexes in the [BEA's 1997 Survey of Current Business][bea-1997].
 
 [bea-1997]: http://www2.econ.iastate.edu/classes/econ302/vandewetering/BEA.html
 
+## Preparation
+
+Requires Python. Install the requirements:
+
+    pip install -r scripts/requirements.txt
+
+Then run the script to get the data:
+
+    python scripts/process.py
+
 ## License
 
 Public Domain Dedication and License.
