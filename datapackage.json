@@ -2,7 +2,7 @@
   "licenses": [
     {
       "id": "odc-pddl",
-      "name": "Public Domain Dedication and License",
+      "name": "public_domain_dedication_and_license",
       "url": "http://opendatacommons.org/licenses/pddl/1.0/",
       "version": "1.0"
     }
@@ -85,7 +85,8 @@
   "sources": [
     {
       "name": "Bureau of Economics Analysis (US Government)",
-      "web": "http://www.bea.gov/national/index.htm#gdp"
+      "web": "http://www.bea.gov/national/index.htm#gdp",
+      "title": "Bureau of Economics Analysis (US Government)"
     }
   ],
   "title": "Gross Domestic Product of the United States (US GDP)",
