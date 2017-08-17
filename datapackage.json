@@ -91,16 +91,16 @@
   "title": "Gross Domestic Product of the United States (US GDP)",
   "views": [
     {
-      "id": "Graph",
-      "label": "Change in GDP",
-      "state": {
-        "graphType": "columns",
+      "name": "graph",
+      "title": "GDP percent change based on chained 2009 dollars",
+      "specType": "simple",
+      "spec": {
+        "type": "column",
         "group": "date",
         "series": [
           "change-chained"
         ]
-      },
-      "type": "Graph"
+      }
     }
   ]
 }
