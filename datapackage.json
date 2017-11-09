@@ -18,9 +18,8 @@
         "fields": [
           {
             "description": "The year",
-            "format": "any",
             "name": "date",
-            "type": "date"
+            "type": "year"
           },
           {
             "description": "GDP in billions of current dollars",
