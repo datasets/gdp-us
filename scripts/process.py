@@ -35,10 +35,10 @@ def extract(url):
     # 1947q1 etc
     def fixquarters(date):
         mapping = [
-            ['q1', '-01-01'],
-            ['q2', '-04-01'],
-            ['q3', '-07-01'],
-            ['q4', '-10-01']
+            ['Q1', '-01-01'],
+            ['Q2', '-04-01'],
+            ['Q3', '-07-01'],
+            ['Q4', '-10-01']
         ]
         for x in mapping:
             date = date.replace(x[0], x[1])
