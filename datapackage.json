@@ -1,10 +1,9 @@
 {
   "licenses": [
     {
-      "id": "odc-pddl",
-      "name": "public_domain_dedication_and_license",
-      "url": "http://opendatacommons.org/licenses/pddl/1.0/",
-      "version": "1.0"
+      "name": "ODC-PDDL-1.0",
+      "path": "http://opendatacommons.org/licenses/pddl/",
+      "title": "Open Data Commons Public Domain Dedication and License v1.0"
     }
   ],
   "name": "gdp-us",
@@ -84,7 +83,7 @@
   "sources": [
     {
       "name": "Bureau of Economics Analysis (US Government)",
-      "web": "http://www.bea.gov/national/index.htm#gdp",
+      "path": "http://www.bea.gov/national/index.htm#gdp",
       "title": "Bureau of Economics Analysis (US Government)"
     }
   ],
