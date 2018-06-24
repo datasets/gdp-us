@@ -23,11 +23,13 @@
           {
             "description": "GDP in billions of current dollars",
             "name": "level-current",
+            "groupChar": ",",
             "type": "number"
           },
           {
             "description": "GDP in billions of chained 2009 dollars",
             "name": "level-chained",
+            "groupChar": ",",
             "type": "number"
           },
           {
@@ -59,11 +61,13 @@
           {
             "description": "GDP in billions of current dollars",
             "name": "level-current",
+            "groupChar": ",",
             "type": "number"
           },
           {
             "description": "GDP in billions of chained 2009 dollars",
             "name": "level-chained",
+            "groupChar": ",",
             "type": "number"
           },
           {
