@@ -1,9 +1,12 @@
 import urllib
 import csv
-import dataconverters.xls  as xls
+import dataconverters.xls as xls
 
-levels = 'http://www.bea.gov/national/xls/gdplev.xls'
-change = 'http://www.bea.gov/national/xls/gdpchg.xls'
+# levels = 'http://www.bea.gov/national/xls/gdplev.xls' - this was the old link
+levels = 'http://www.bea.gov/system/files/2018-05/gdplev_0.xlsx'
+# change = 'http://www.bea.gov/national/xls/gdpchg.xls' - this was the old link
+change = 'http://www.bea.gov/system/files/2018-10/gdpchg.xlsx'
+
 
 def process():
     # headers atm are [ 'Date', '... current', '... chained' ]
@@ -11,26 +14,30 @@ def process():
     yearc, quarterc = extract(change)
     year = combine(yearl, yearc)
     quarter = combine(quarterl, quarterc)
-    headers = [ 'date', 'level-current', 'level-chained', 'change-current', 'change-chained' ]
+    headers = ['date', 'level-current', 'level-chained', 'change-current', 'change-chained']
     writedata('year', headers, year)
     writedata('quarter', headers, quarter)
-    
+
+
 def combine(levels, change):
     out = zip(*levels)
     out = out + zip(*change)[1:]
-    out = [ list(r) for r in zip(*out) ]
+    out = [list(r) for r in zip(*out)]
     return out
+
 
 def extract(url):
     fo = urllib.urlopen(url)
     records, metadata = xls.parse(fo)
+
     def rerowify(dict_):
-        return [ dict_[f['id']] for f in metadata['fields'] ]
-    rows = [ rerowify(r) for r in records ]
+        return [dict_[f['id']] for f in metadata['fields']]
+
+    rows = [rerowify(r) for r in records]
     del rows[:8]
     transposed = zip(*rows)
     annual = zip(*transposed[:3])
-    annual = [ [int(r[0])] + list(r[1:]) for r in annual if r[0] ]
+    annual = [[int(r[0])] + list(r[1:]) for r in annual if r[0]]
     quarterly = zip(*transposed[4:7])
     # 1947q1 etc
     def fixquarters(date):
@@ -43,8 +50,9 @@ def extract(url):
         for x in mapping:
             date = date.replace(x[0], x[1])
         return str(date)
-    quarterly = [ [fixquarters(r[0])] + list(r[1:]) for r in quarterly ]
+    quarterly = [[fixquarters(r[0])] + list(r[1:]) for r in quarterly]
     return (annual, quarterly)
+
 
 def writedata(name, headers, data):
     fo = open('%s.csv' % name, 'w')
@@ -55,4 +63,3 @@ def writedata(name, headers, data):
 
 if __name__ == '__main__':
     process()
-
