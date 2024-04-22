@@ -95,6 +95,7 @@
   "views": [
     {
       "name": "graph",
+      "resources": ["gdp-us"],
       "title": "GDP percent change based on chained 2009 dollars",
       "specType": "simple",
       "spec": {
