@@ -99,7 +99,7 @@
       "title": "GDP percent change based on chained 2009 dollars",
       "specType": "simple",
       "spec": {
-        "type": "bar",
+        "type": "line",
         "group": "date",
         "series": [
           "change-chained"
