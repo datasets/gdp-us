@@ -95,7 +95,10 @@
   "views": [
     {
       "name": "graph",
-      "resources": [ "year", "quarter" ],
+      "resources": [
+        "year",
+        "quarter"
+      ],
       "title": "GDP percent change based on chained 2009 dollars",
       "specType": "simple",
       "spec": {
@@ -106,5 +109,6 @@
         ]
       }
     }
-  ]
+  ],
+  "collection": "economic-data"
 }
