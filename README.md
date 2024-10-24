@@ -1,3 +1,5 @@
+<a href="https://datahub.io/core/gdp-us"><img src="https://badgen.net/badge/icon/View%20on%20datahub.io/orange?icon=https://datahub.io/datahub-cube-badge-icon.svg&label&scale=1.25)" alt="badge" /></a>
+
 Gross Domestic Product (GDP) of the United States (US) both nominal and real on
 an annual and quarterly basis. Annual data is provided since 1930 and quarterly
 data since 1947. Both total GDP (levels) and annualized percentage change in
