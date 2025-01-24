@@ -4,7 +4,7 @@ Gross Domestic Product (GDP) of the United States (US) both nominal and real on
 an annual and quarterly basis. Annual data is provided since 1930 and quarterly
 data since 1947. Both total GDP (levels) and annualized percentage change in
 GDP are provided. Both levels and changes are available both in current dollars
-(nominal GDP) and in chained 2009 dollars (real GDP). Data is sourced from US
+(nominal GDP) and in chained 2017 dollars (real GDP). Data is sourced from US
 Government's Bureau of Economic Analysis (BEA) and provided in standardized
 CSV.
 
@@ -25,6 +25,9 @@ Requires Python. Install the requirements:
 Then run the script to get the data:
 
     python scripts/process.py
+
+## Automation
+Up-to-date (auto-updates every month) gdp-us dataset could be found on the datahub.io: https://datahub.io/core/gdp-us
 
 ## License
 
